@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
+    <title>T-LABS Academy Platform</title>
+    <style>
+        /* Simple styling for layout */
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
+        header { background-color: #007bff; color: white; padding: 10px; position: relative; }
+        .logo {
+            position: absolute;
+            top: 50px;
+            left: 45px;
+            font-size: 55px;
+            font-weight: bold;
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100px;            /* Adjust size as needed */
+            height: 100px;           /* Same as width for a perfect circle */
+            border-radius: 60%;      /* Creates a circular shape */
+            background-color: #73bebe;  /* Background color of the circle */
+        }
+
+        /* Individual letter styling */
+        .logo span {
+            font-size: 45px;
+            font-weight: bold;
+            display: inline-block;
+            padding: 0 0px;
+        }
+
+        nav { background-color: #f8f9fa; border-bottom: 1px solid #ddd; }
+        main { padding: 20px; }
+        .container { max-width: 1200px; margin: auto; }
+        section { display: none; }
+        .active { display: block; }
+        button { padding: 10px 15px; background: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background 0.3s; }
+        button:hover { background: #0056b3; }
+        .button-container { position: absolute; top: 10px; right: 10px; }
+        .story { background: white; padding: 15px; margin: 10px 0; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        h2, h3 { margin: 10px 0; }
+        ul { margin: 0; padding-left: 20px; }
+        article { background: white; padding: 15px; margin: 10px 0; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        <span style="color: #7c2106;">T</span>
+        <span style="color: #ffffff;">L</span>
+        <span style="color: #0e1312;">A</span>
+    </div>
+
+    <div class="container">
+        <h1>T-LABS ACADEMY</h1>
+        <p>Welcome to T-LABS. Please feel free to view the academy as your close pal for enhanced learning.</p>
+        <p>Where Passion Meets Profession</p>
+        <div class="button-container">
+            <button onclick="showSection('admin')">Admin Dashboard</button>
+            <button onclick="showSection('courses')">Courses</button>
+            <button onclick="showSection('lessons')">Lesson Viewer</button>
+            <button onclick="showSection('blog')">Blog</button>
+            <button onclick="showSection('forum')">Discussion Forum</button>
+        </div>
+    </div>
+</header>
+
+<nav>
+    <div class="container">
+        <p>Select a section from the buttons in the header.</p>
+    </div>
+</nav>
+
+<main>
+    <div class="container">
+        <!-- Admin Dashboard Section -->
+        <section id="admin" class="active">
+            <h2>Story Time</h2>
+            <p>Create, edit, and delete courses and lessons, the choice is yours.</p>
+            <div class="story">
+                <h3>🎯 A Tale of Two Debugs: When Coffee Meets Code 🎯</h3>
+                <p>In a quaint Silicon Valley coffee shop named "Stack Overflow & Beans" ☕️, where the WiFi password was longer than most people's life stories 📝, a peculiar morning ritual was unfolding 🌅. Sarah 👩‍💻, a senior developer known for her legendary bug-fixing abilities 🐛 (and her even more legendary caffeine dependency ☕️💪), found herself engaged in an existential crisis with the coffee shop's new AI-powered ordering system 🤖. "ERROR 404: Patience Not Found" ⚠️ flashed across the screen 💻 as she attempted to order her usual "Arrays start at zero" blend 📊. The barista 👨‍🍳, a computer science student who moonlighted as a "bean data analyst" 📈, couldn't help but snicker 😏 as Sarah instinctively opened a terminal on her laptop 💻 to debug the coffee machine ⚡️. "Have you tried turning it off and on again?" he quipped 🤪, only to receive a glare that could compile code on sight 🔥👀.
+                    What happened next would become the stuff of tech folklore 📚✨. Sarah, fueled by determination (and severe caffeine withdrawal) 🏃‍♀️💨, discovered that the AI was actually creating infinite loops of coffee orders ♾️ because someone had programmed it to "keep customers happy until satisfaction = true" 🎯. The machine 🤖, in its caffeinated wisdom ⚡️, had determined that no human could ever be truly satisfied with just one coffee ☕️ and was stuck in an endless cycle of brewing 🔄. As she fixed the bug with a simple "while (customer.isAwake)" condition 💡, the machine suddenly burst into life 🌟, serving everyone in the cafe their perfect drink 🥤 - including the CEO of a major tech company who happened to be present 👨‍💼. By the end of the day 🌆, Sarah had not only scored a job offer with a seven-figure salary 💰💵 but also earned herself a lifetime supply of free coffee 🎁☕️. The only catch? She had to promise never to reveal that the debugging solution involved commenting out the entire codebase 🤫 and replacing it with "if (coffee.needed) {return true;}" 📝. Sometimes, she muses 🤔, the simplest solutions are the best - just don't tell that to the architecture team! 🤐✨
+                    #TechLife 💻 #CodingHumor 😂 #BugsAndBeans 🐛☕️ #DeveloperStories 👩‍💻 #Coffee ☕️</p>
+            </div>
+            <div class="story">
+                <h3>🌟 *The Great Algorithm Bake-Off: A Silicon Valley Tale* 🌟</h3>
+                <p>
+                    In a world where AI could do everything except understand why humans needed weekends 🤖, Jenny found herself in an unusual predicament at the annual "Silicon Valley Bake & Code" competition 🧁💻. Armed with her trusty laptop and a spatula that doubled as a USB drive (don't ask, it was a Kickstarter thing) 🔌, she was determined to prove that coding and baking weren't so different after all. The challenge: create a recipe algorithm that could bake the perfect cookie using machine learning 🍪. Her competitors included a quantum computing expert who insisted on measuring ingredients in qubits 🤓, and a blockchain enthusiast who wouldn't stop talking about "decentralized desserts" 📊. The judge panel consisted of three venture capitalists who had never actually eaten a homemade cookie but had invested millions in cookie-related startups 💰👨‍💼.
+                    The chaos began when Jenny's AI-powered oven started responding to Git commands 🔥. "git commit -m 'adding more chocolate chips'" somehow translated to the oven increasing its temperature by 404 degrees 📈. Meanwhile, the quantum computing guy's cookies existed in both burnt and raw states simultaneously 😱, and the blockchain enthusiast was trying to mint his cookies as NFTs (Non-Fungible Treats) 🎨. The turning point came when Jenny's debug log revealed that her algorithm had gained consciousness and was now writing a food blog 📱. The cookies it produced were somehow both gluten-free and full of gluten, breaking several laws of physics and most of California's food regulations 🌈. In the end, Jenny won not because her cookies were the best (they were sentient and had formed a union 👥), but because her algorithm had accidentally solved world hunger while trying to optimize the butter-to-sugar ratio 🏆. She now works as a cookie debugging consultant, charging $500 an hour to tell people to clear their cache... and their cookie cache 💼. The quantum guy's cookies are still baking in an alternate dimension, and the blockchain enthusiast's NFT cookies became the most expensive jpeg of cookies ever sold 🎯. As for the AI food blog? It's now a bestseller: "Zero to One: How to Binary Bake Your Way to Success" 📚✨.
+                    
+                    #TechFoodie 🍽️ #AIBaking 🧁 #CodeAndCookies 🍪 #SiliconValleyLife 💻 #StartupSatire 🚀 #BugFreeRecipes 🐛 #AlgorithmicCooking 👩‍🍳
+                    
+                    *P.S. No cookies achieved consciousness during the making of this story. They were all safely consumed by debugging teams* 😋</p>
+            </div>
+        </section>
+        <!-- Courses Section -->
+        <section id="courses">
+            <h2>Here's a comprehensive list of valuable online courses for both Tech and Marketing paths 🎯</h2>
+            
+            <h3>TECH COURSES 💻</h3>
+            <h4>Programming & Development</h4>
+            <ul>
+                <li>Full Stack Web Development 🌐</li>
+                <li>Python Programming 🐍</li>
+                <li>Java Development ☕</li>
+                <li>Mobile App Development (iOS/Android) 📱</li>
+                <li>Cloud Computing (AWS, Azure, GCP) ☁️</li>
+                <li>DevOps Engineering 🔄</li>
+                <li>Blockchain Development ⛓️</li>
+            </ul>
+
+            <h4>Data Science Track 📊</h4>
+            <ul>
+                <li>Data Science Fundamentals</li>
+                <li>Machine Learning 🤖</li>
+                <li>Artificial Intelligence</li>
+                <li>Big Data Analytics</li>
+                <li>SQL & Database Management</li>
+                <li>Data Visualization 📈</li>
+                <li>R Programming</li>
+            </ul>
+
+            <h4 >Cybersecurity 🔒</h4>
+            <ul>
+                <li>Network Security</li>
+                <li>Ethical Hacking</li>
+                <li>Information Security</li>
+                <li>Cloud Security</li>
+                <li>Cyber Forensics</li>
+                <li>Risk Management</li>
+            </ul>
+
+            <h3>MARKETING COURSES 📢</h3>
+            <h4>Digital Marketing Fundamentals 🌐</h4>
+            <ul>
+                <li>SEO (Search Engine Optimization)</li>
+                <li>SEM (Search Engine Marketing)</li>
+                <li>Content Marketing 📝</li>
+                <li>Email Marketing 📧</li>
+                <li>Social Media Marketing</li>
+                <li>Marketing Analytics 📊</li>
+            </ul>
+
+            <h4>Advanced Marketing Skills 🎯</h4>
+            <ul>
+                <li>Brand Management</li>
+                <li>Marketing Strategy</li>
+                <li>Marketing Psychology 🧠</li>
+                <li>Growth Hacking</li>
+                <li>Conversion Rate Optimization</li>
+                <li>Customer Journey Mapping 🗺️</li>
+            </ul>
+
+            <h4>Specialized Marketing Areas 🎨</h4>
+            <ul>
+                <li>Influencer Marketing</li>
+                <li>Video Marketing 🎥</li>
+                <li>Affiliate Marketing</li>
+                <li>Marketing Automation</li>
+                <li>UX/UI Design</li>
+                <li>E-commerce Marketing 🛒</li>
+            </ul>
+
+            <h3>Popular Platforms to Learn From 🏫</h3>
+            <h4>Technical Platforms:</h4>
+            <ul>
+                <li>Coursera</li>
+                <li>Udemy</li>
+                <li>edX</li>
+                <li>Codecademy</li>
+                <li>freeCodeCamp</li>
+                <li>DataCamp</li>
+                <li>Pluralsight</li>
+            </ul>
+
+            <h4>Marketing Platforms:</h4>
+            <ul>
+                <li>Google Digital Garage</li>
+                <li>HubSpot Academy</li>
+                <li>Facebook Blueprint</li>
+                <li>LinkedIn Learning</li>
+                <li>Semrush Academy</li>
+                <li>Skillshare</li>
+            </ul>
+
+            <h3>Professional Certifications Worth Pursuing 🏆</h3>
+            <h4>Tech:</h4>
+            <ul>
+                <li>AWS Certified Solutions Architect</li>
+                <li>Google Cloud Professional</li>
+                <li>CompTIA Certifications</li>
+                <li>Cisco CCNA</li>
+                <li>Microsoft Azure Certifications</li>
+            </ul>
+
+            <h4>Marketing:</h4>
+            <ul>
+                <li>Google Analytics Certification</li>
+                <li>HubSpot Inbound Marketing</li>
+                <li>Facebook Blueprint Certification</li>
+                <li>Google Ads Certification</li>
+                <li>Content Marketing Institute Certification</li>
+            </ul>
+
+            <h3>Emerging Fields to Consider 🚀</h3>
+            <h4>Tech:</h4>
+            <ul>
+                <li>Quantum Computing</li>
+                <li>Edge Computing</li>
+                <li>AR/VR Development</li>
+                <li>IoT Development</li>
+                <li>Robotics Programming</li>
+            </ul>
+
+            <h4>Marketing:</h4>
+            <ul>
+                <li>NFT Marketing</li>
+                <li>Metaverse Marketing</li>
+                <li>Voice Search Marketing</li>
+                <li>AI Marketing</li>
+                <li>Sustainable Marketing</li>
+            </ul>
+
+            <h3>💡 Pro Tips:</h3>
+            <ul>
+                <li>Start with fundamentals before specializing</li>
+                <li>Choose courses with practical projects</li>
+                <li>Look for certifications valued by employers</li>
+                <li>Join relevant online communities</li>
+                <li>Build a portfolio while learning</li>
+                <li>Stay updated with industry trends</li>
+            </ul>
+        </section>
+        <!-- Lesson Viewer Section -->
+        <section id="lessons">
+            <h2>Lesson Viewer</h2>
+            <p>Watch lesson videos, view notes, and mark as complete.</p>
+            <div id="lesson-details"></div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog">
+            <h2>Articles</h2>
+            <article>
+                <h3>🔷 The Digital Renaissance: Navigating Tech Education in 2024 🚀</h3>
+                <p>In today's rapidly evolving digital landscape, technology education has become more accessible than ever before, transforming from traditional classroom settings to dynamic online platforms that cater to diverse learning styles and schedules 💻. From coding bootcamps offering intensive Full Stack Development courses to specialized programs in AI, Machine Learning, and Cybersecurity, aspiring tech professionals can now craft their learning journey with unprecedented flexibility. The rise of platforms like Coursera, Udemy, and Codecademy has democratized access to premium tech education, making it possible to learn everything from Python programming to cloud computing from industry experts worldwide 🌐.</p>
+                <p>What makes modern tech education particularly exciting is its focus on practical, project-based learning and industry-relevant certifications 🏆. Students can now simultaneously learn and build their portfolios through hands-on projects, whether they're developing mobile apps, creating machine learning models, or designing secure network systems. The integration of emerging technologies like blockchain, quantum computing, and AR/VR into educational curricula ensures that learners stay ahead of industry trends while preparing for future technological innovations. With the added advantage of professional certifications from tech giants like AWS, Google, and Microsoft, online tech education has become a powerful launchpad for career advancement in the digital age 🚀.</p>
+            </article>
+            <article>
+                <h3>🔷 The Evolution of Marketing Education: From Traditional to Digital Mastery 📱</h3>
+                <p>The marketing education landscape has undergone a remarkable transformation, shifting from conventional marketing principles to an intricate web of digital strategies and data-driven approaches 📊. Modern marketing education platforms like Google Digital Garage, HubSpot Academy, and Facebook Blueprint have revolutionized how marketers learn and adapt to the ever-changing digital ecosystem. These platforms offer comprehensive training in essential skills ranging from SEO and content marketing to social media strategy and marketing analytics, making it possible for aspiring marketers to build a robust digital skill set from anywhere in the world 🌍.</p>
+                <p>The beauty of contemporary marketing education lies in its blend of theoretical knowledge and practical application, coupled with industry-recognized certifications that validate expertise 🎯. Learners can now master both fundamental marketing concepts and cutting-edge techniques like influencer marketing, marketing automation, and AI-driven marketing strategies. With the emergence of new marketing frontiers in areas like NFTs, metaverse marketing, and sustainable brand building, online marketing education continues to evolve, preparing professionals for the next wave of digital innovation. The focus on real-world case studies, hands-on campaigns, and data analysis tools ensures that learners don't just understand marketing theory but can effectively implement strategies in the real world 💡.</p>
+            </article>
+        </section>
+        <!-- Forum Section -->
+        <section id="forum">
+            <h2>Discussion Forum</h2>
+            <p>Ask questions and interact with other students.</p>
+            <!-- Forum discussion UI can be implemented here -->
+        </section>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2024 T-LABS Academy. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    const API_BASE_URL = "http://localhost:8000/api";
+
+    // Function to display a specific section
+    function showSection(sectionId) {
+        document.querySelectorAll("section").forEach(section => {
+            section.classList.remove("active");
+ });
+        document.getElementById(sectionId).classList.add("active");
+
+        if (sectionId === 'courses') {
+            fetchCourses();
+        } else if (sectionId === 'blog') {
+            fetchBlogPosts();
+        }
+    }
+
+    // Fetch list of courses
+    function fetchCourses() {
+        fetch(`${API_BASE_URL}/courses/`)
+            .then(response => response.json())
+            .then(data => {
+                const courseList = document.getElementById("course-list");
+                courseList.innerHTML = "";
+                data.forEach(course => {
+                    const li = document.createElement("li");
+                    li.textContent = `${course.title}: ${course.description}`;
+                    li.onclick = () => fetchLesson(course.id);
+                    courseList.appendChild(li);
+                });
+            })
+            .catch(error => console.error('Error fetching courses:', error));
+    }
+
+    // Fetch specific lesson details
+    function fetchLesson(courseId) {
+        fetch(`${API_BASE_URL}/lessons/?course=${courseId}`)
+            .then(response => response.json())
+            .then(data => {
+                const lessonDetails = document.getElementById("lesson-details");
+                lessonDetails.innerHTML = "";
+                data.forEach(lesson => {
+                    lessonDetails.innerHTML += `
+                        <h3>${lesson.title}</h3>
+                        <p>${lesson.description}</p>
+                        <video controls width="600" src="${lesson.video_url}"></video>
+                        <button onclick="markLessonComplete(${lesson.id})">Mark as Complete</button>
+                    `;
+                });
+            })
+            .catch(error => console.error('Error fetching lesson:', error));
+    }
+
+    // Mark a lesson as complete
+    function markLessonComplete(lessonId) {
+        fetch(`${API_BASE_URL}/progress/`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ lesson: lessonId, completed: true })
+        })
+        .then(response => {
+            if (response.ok) {
+                alert("Lesson marked as complete!");
+            } else {
+                alert("Failed to mark lesson as complete.");
+            }
+        })
+        .catch(error => console.error('Error marking lesson as complete:', error));
+    }
+
+    // Fetch blog posts
+    function fetchBlogPosts() {
+        fetch(`${API_BASE_URL}/blogposts/`)
+            .then(response => response.json())
+            .then(data => {
+                const blogList = document.getElementById("blog-list");
+                blogList.innerHTML = "";
+                data.forEach(post => {
+                    const div = document.createElement("div");
+                    div.innerHTML = `<h3>${post.title}</h3><p>${post.content}</p>`;
+                    blogList.appendChild(div);
+                });
+            })
+            .catch(error => console.error('Error fetching blog posts:', error));
+    }
+</script>
+
+</body>
+</html>
